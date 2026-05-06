@@ -24,8 +24,8 @@ const RAIZ = __dirname;
 // ============================================================
 // CONFIG: usuário admin
 // ============================================================
-const ADMIN_USUARIO = 'space123';
-const ADMIN_SENHA   = 'space 2023!';
+const ADMIN_USUARIO = process.env.ADMIN_USUARIO || 'space123';
+const ADMIN_SENHA   = process.env.ADMIN_SENHA   || 'space 2023!';
 
 // Hasheia a senha com scrypt (módulo nativo) e armazena só o hash
 const SALT = crypto.randomBytes(16);
